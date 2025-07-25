@@ -1,0 +1,88 @@
+/* Apply the classic font to the body */
+body {
+	font-family: 'Noto Serif', serif;
+	/* FIX: Prevent horizontal scrolling on all devices */
+	overflow-x: hidden;
+}
+
+/* Custom styles for a vintage look */
+.vintage-bg {
+	background-color: #f5f5dc; /* Beige */
+	background-image:
+		linear-gradient(rgba(240, 230, 210, 0.5) .1em, transparent .1em),
+		linear-gradient(90deg, rgba(240, 230, 210, 0.5) .1em, transparent .1em);
+	background-size: 2em 2em;
+}
+
+.paper-container {
+	background-color: #fffaf0; /* FloralWhite */
+	border: 1px solid #d2b48c; /* Tan */
+	box-shadow: 10px 10px 20px rgba(0,0,0,0.2), 0 0 5px rgba(0,0,0,0.1);
+	position: relative;
+	transition: all 0.3s ease-in-out;
+}
+
+/* --- Custom Styles for Flatpickr --- */
+.flatpickr-calendar {
+	font-family: 'Noto Serif', serif;
+	background: #fffaf0;
+	border: 1px solid #d2b48c;
+	border-radius: 8px;
+	box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+	color: #854d0e;
+}
+.flatpickr-months .flatpickr-month, .flatpickr-weekdays { color: #854d0e; }
+.flatpickr-months .flatpickr-prev-month:hover svg, .flatpickr-months .flatpickr-next-month:hover svg { fill: #92400e; }
+.flatpickr-day { color: #854d0e; }
+.flatpickr-day:hover, .flatpickr-day:focus { background: #fef3c7; border-color: #fef3c7; }
+.flatpickr-day.today { border-color: #d97706; }
+.flatpickr-day.selected { background: #92400e; border-color: #92400e; color: #fff; }
+.numInputWrapper:hover, .arrowUp:hover, .arrowDown:hover { background: #fde68a; }
+.flatpickr-current-month .numInput { color: #854d0e; font-weight: bold; }
+.flatpickr-day.flatpickr-disabled { color: #d2b48c; }
+
+/* --- Gear Animation Styles --- */
+@keyframes spin-clockwise {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}
+@keyframes spin-counter-clockwise {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(-360deg); }
+}
+.gear-animation-container {
+	min-height: 250px; /* Reserve space to prevent layout shift */
+}
+.gears {
+	position: relative;
+	width: 150px;
+	height: 150px;
+	color: #a16207; /* amber-700 */
+}
+.gears .gear {
+	position: absolute;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+.gear-1 {
+	font-size: 5rem; /* 80px */
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	animation-name: spin-clockwise;
+	animation-duration: 4s;
+}
+.gear-2 {
+	font-size: 3rem; /* 48px */
+	top: 8px;
+	left: 8px;
+	animation-name: spin-counter-clockwise;
+	animation-duration: 3s;
+}
+.gear-3 {
+	font-size: 2.5rem; /* 40px */
+	bottom: 12px;
+	right: 12px;
+	animation-name: spin-counter-clockwise;
+	animation-duration: 3s;
+}
