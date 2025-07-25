@@ -9,7 +9,7 @@ document.addEventListener('keydown', function (e) {
 		e.preventDefault();
 	}
 });
-// DOM Elements 
+// DOM Elements
 const birthdateInput = document.getElementById('birthdate');
 const calculateBtn = document.getElementById('calculateBtn');
 const messageDiv = document.getElementById('message');
@@ -28,7 +28,6 @@ flatpickr("#birthdate", {
 });
 
 // --- HELPER FUNCTIONS ---
-// Changed padding and font size for better mobile view
 function createTimeUnitBox(label, unitId) {
 	return `<div class="bg-amber-100/50 p-3 sm:p-4 rounded-lg border border-amber-300 shadow-inner"><div id="${unitId}" class="text-3xl sm:text-4xl font-bold text-amber-900">0</div><div class="text-sm uppercase tracking-wider">${label}</div></div>`;
 }
